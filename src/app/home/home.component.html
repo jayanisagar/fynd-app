@@ -1,0 +1,10 @@
+<p>home works!</p>
+<app-drop-down [title]="'Single Dropdown'" [multipleSelect]="false" [listData]="colors" (onResult)="onResultSingle($event)"></app-drop-down>
+<app-drop-down [title]="'Multi Dropdown'" [multipleSelect]="true" [listData]="listData" (onResult)="onResultMultiple($event)"></app-drop-down>
+
+<div *ngIf="resultValue"> 
+    <span style="font-weight: bold;"> Result</span>
+    <div>
+        {{resultValue}}
+    </div>
+</div>
