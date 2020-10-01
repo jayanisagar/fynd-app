@@ -1,6 +1,6 @@
 <div>
     <span style="font-weight: bold;"> {{title}} </span>
-    <!-- multiple Dropwon -->
+    <!-- Start multiple Dropwon -->
     <div *ngIf="multipleSelect">
         <mat-list-item class="primary-imenu-item" role="listitem">
             <mat-select name="components" [(ngModel)]="selectedMultiple" (ngModelChange)="selectOut($event)"
@@ -19,7 +19,8 @@
             </mat-select>
         </mat-list-item>
     </div>
-  <!-- single Dropwon -->
+  <!-- End multiple Dropwon -->
+  <!-- Start single Dropwon -->
     <div *ngIf="!multipleSelect">
         <mat-select name="components" [(ngModel)]="selectedMultiple" (ngModelChange)="selectOut($event)">
             <mat-option *ngFor="let component of _listData" [value]="component">
@@ -27,4 +28,5 @@
             </mat-option>
         </mat-select>
     </div>
+  <!-- End single Dropwon -->
 </div>
